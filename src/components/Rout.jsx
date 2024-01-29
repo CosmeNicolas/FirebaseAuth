@@ -1,8 +1,11 @@
-
+import { Routes, Route } from "react-router-dom"
+import Login from './Login'
 
 const Rout = () => {
   return (
-    <div>Rout</div>
+    <Routes>
+      <Route path="/" element={<Login/>} ></Route>
+    </Routes>
   )
 }
 
