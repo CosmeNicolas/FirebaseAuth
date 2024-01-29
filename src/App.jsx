@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container} from 'react-bootstrap'
 import Footer from './components/Footer';
 import {BrowserRouter} from 'react-router-dom'
+import Rout from './components/Rout';
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
     <>
     <BrowserRouter>
     <Container className="main text-center">
-     <h1>Auth with Firebase </h1>
+     <Rout/>
     </Container>
     <Footer/>
     </BrowserRouter>
