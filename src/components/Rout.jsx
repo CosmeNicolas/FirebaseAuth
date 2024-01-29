@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom"
-import Login from './Login'
+import SingUp from './SingUp'
 
 const Rout = () => {
   return (
     <Routes>
-      <Route path="/" element={<Login/>} ></Route>
+      <Route path="/" element={<SingUp/>} ></Route>
     </Routes>
   )
 }
