@@ -1,9 +1,18 @@
-#root{
+#root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #7e2553;
 }
 
-.main{
+.main {
   flex-grow: 1;
+}
+
+.container-login {
+  background: rgba(29, 43, 83, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(190, 195, 255, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
 }
