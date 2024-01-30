@@ -1,13 +1,36 @@
+import { useState } from 'react'
 import {Form, Button} from 'react-bootstrap'
 import {Container} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import firebase from '../config/FirebaseConfig'
 
+
+
+
 const SingUp = () => {
 
-  const handleSubmit = async () =>
+ const [name, setName] = useState('')
+ const [email, setEmail] = useState('')
+ const [password, setPassword] = useState('')
+
+
+
+
+  const handleSubmit = async (e) =>
   {
-    e.prevent.default()
+    e.preventDefault()
+    try
+    {
+      const user  = await firebase.auth().createUserWithEmailAndPassword(email, password)
+      if(user)
+      {
+        alert('Account Created Succesfully ')
+      }
+    } 
+    catch (error) 
+    {
+      alert(error)
+    }
   }
 
   return (
@@ -20,7 +43,10 @@ const SingUp = () => {
         <Form.Label>UserName</Form.Label>
         <Form.Control 
         className='py-2'
-         type="text" placeholder="Enter email" />
+         type="text" 
+         placeholder="Enter User Name"
+          value={name} 
+          onChange={(e)=>setName(e.target.value)}/>
       </Form.Group>
 
         {/* email */}
@@ -28,7 +54,10 @@ const SingUp = () => {
         <Form.Label>Email address</Form.Label>
         <Form.Control 
         className='py-2'
-         type="email" placeholder="Enter email" />
+         type="email" 
+         placeholder="Enter email" 
+         value={email}
+         onChange={(e)=>setEmail(e.target.value)} />
       </Form.Group>
 
         {/* password */}
@@ -36,7 +65,10 @@ const SingUp = () => {
         <Form.Label>Password</Form.Label>
         <Form.Control 
         className='py-2'
-         type="password" placeholder="Password" />
+         type="password"
+          placeholder="Password" 
+          value={password}
+          onChange={(e)=>setPassword(e.target.value)} />
       </Form.Group>
 
       {/* formText */}
