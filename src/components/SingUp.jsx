@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom'
 import firebase from '../config/FirebaseConfig'
 
 const SingUp = () => {
+
+  const handleSubmit = async () =>
+  {
+    e.prevent.default()
+  }
+
   return (
     <>
     <Container className='mt-5 container-login' >
@@ -38,7 +44,7 @@ const SingUp = () => {
           Have an Account <Link to="./Login" >Login Now</Link>
         </Form.Text>
       
-      <Button className='my-2' variant="warning" type="submit">
+      <Button onClick={handleSubmit} className='my-2' variant="warning" type="submit">
         SingUp
       </Button>
     </Form>
