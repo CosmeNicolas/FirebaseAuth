@@ -1,6 +1,7 @@
 import {Form, Button} from 'react-bootstrap'
 import {Container} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import firebase from '../config/FirebaseConfig'
 
 const SingUp = () => {
   return (
@@ -11,19 +12,25 @@ const SingUp = () => {
         {/* userName */}
        <Form.Group className="mb-3 text-light" controlId="formBasicEmail">
         <Form.Label>UserName</Form.Label>
-        <Form.Control type="text" placeholder="Enter email" />
+        <Form.Control 
+        className='py-2'
+         type="text" placeholder="Enter email" />
       </Form.Group>
 
         {/* email */}
       <Form.Group className="mb-3 text-light" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Control 
+        className='py-2'
+         type="email" placeholder="Enter email" />
       </Form.Group>
 
         {/* password */}
       <Form.Group className="mb-3 text-light" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
+        <Form.Control 
+        className='py-2'
+         type="password" placeholder="Password" />
       </Form.Group>
 
       {/* formText */}
@@ -31,7 +38,7 @@ const SingUp = () => {
           Have an Account <Link to="./Login" >Login Now</Link>
         </Form.Text>
       
-      <Button className='my-2' variant="primary" type="submit">
+      <Button className='my-2' variant="warning" type="submit">
         SingUp
       </Button>
     </Form>
