@@ -1,8 +1,26 @@
-# React + Vite
+# FirebaseAuth 👌
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+"Firebase Authentication React" es un proyecto que aprovecha la potencia de Firebase para implementar la autenticación en una aplicación React. El foco principal es la creación de un formulario de registro que permite a los usuarios registrarse en la aplicación. Los datos de registro se almacenan de manera segura, permitiendo una gestión eficiente de la autenticación.
 
-Currently, two official plugins are available:
+## Características Principales 🛠️
+Firebase Authentication: Emplea Firebase Auth para gestionar el proceso de autenticación de usuarios de forma segura y eficiente.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías Utilizadas 🤙
+
+- [React](https://es.reactjs.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Firebase](https://firebase.google.com/?hl=es)
+
+  ## Instalación 👨‍💻
+
+ Clona el repositorio
+   ```bash
+   git clone https://github.com/CosmeNicolas/FirebaseAuth.git
+
+   Instala las dependencias
+
+   npm install
+
+  Inicia el proyecto
+
+  npm run dev 
